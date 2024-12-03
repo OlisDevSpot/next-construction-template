@@ -1,5 +1,11 @@
+import Hero from "./_components/landing/Hero";
+import SectionOne from "./_components/landing/SectionOne";
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24"></main>
+    <main className="flex flex-col">
+      <Hero />
+      <SectionOne />
+    </main>
   );
 }
