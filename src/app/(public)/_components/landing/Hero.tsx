@@ -1,7 +1,6 @@
 "use client";
 
 import CtaButtons from "@/components/CtaButtons";
-import { Button } from "@/components/ui/button";
 import { motion } from "motion/react";
 
 export default function Hero() {
