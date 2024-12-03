@@ -1,11 +1,11 @@
 import Hero from "./_components/landing/Hero";
 import SectionOne from "./_components/landing/SectionOne";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <main className="flex flex-col">
+    <div className="">
       <Hero />
       <SectionOne />
-    </main>
+    </div>
   );
 }
