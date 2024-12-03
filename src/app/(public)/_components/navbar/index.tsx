@@ -23,7 +23,7 @@ export default function Navbar() {
   return (
     <nav
       className={cn(
-        "w-full h-16 flex items-center fixed top-0 transition duration-300",
+        "w-full h-16 flex items-center fixed top-0 transition duration-300 z-50",
         scrollPosition > 10 ? "backdrop-blur-md bg-black/50" : ""
       )}
     >
