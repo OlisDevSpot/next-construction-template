@@ -1,6 +1,10 @@
+"use client";
+
 import Logo from "@/components/Logo";
 import { companyInfo } from "@/data/companyInfo";
 import FooterLink from "./FooterLink";
+
+import { motion } from "motion/react";
 
 export default function Footer() {
   return (
@@ -26,13 +30,15 @@ export default function Footer() {
           ))}
           <li className="flex gap-2 items-center">
             {companyInfo.socials.map((social) => (
-              <a
+              <motion.a
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
                 key={social.type}
                 href={social.href}
                 className="flex items-center justify-center rounded-full bg-primary h-10 w-10"
               >
                 <social.icon size={24} />
-              </a>
+              </motion.a>
             ))}
           </li>
         </ul>

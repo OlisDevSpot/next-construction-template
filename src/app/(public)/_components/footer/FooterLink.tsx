@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { motion } from "motion/react";
 
 interface FooterLinkProps {
   label: string;
@@ -7,8 +8,12 @@ interface FooterLinkProps {
 
 export default function FooterLink({ label, href }: FooterLinkProps) {
   return (
-    <li className="text-neutral-400 hover:text-neutral-200 transition">
+    <motion.li
+      whileHover={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
+      className="text-neutral-400 hover:text-neutral-200 transition"
+    >
       <Link href={href}>{label}</Link>
-    </li>
+    </motion.li>
   );
 }

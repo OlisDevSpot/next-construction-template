@@ -2,7 +2,7 @@
 
 import Logo from "@/components/Logo";
 import NavItem from "./NavItem";
-import { items } from "../../_data/navbarItems";
+import { items } from "../../_data/navItems";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import useScrollNavigation from "@/hooks/useScrollNavigation";

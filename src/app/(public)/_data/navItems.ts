@@ -4,16 +4,16 @@ export const items = [
     href: "/about",
   },
   {
-    label: "Blog",
-    href: "/blog",
-  },
-  {
     label: "Services",
     href: "/services",
   },
   {
     label: "Projects",
     href: "/projects",
+  },
+  {
+    label: "Blog",
+    href: "/blog",
   },
   {
     label: "Book Online",
