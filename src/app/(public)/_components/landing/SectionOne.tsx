@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/carousel";
 import Image from "next/image";
 import { useRef } from "react";
+import CtaButtons from "@/components/CtaButtons";
 
 export default function SectionOne() {
   const plugin = useRef(Autoplay({ delay: 2000, stopOnInteraction: true }));
@@ -61,6 +62,12 @@ export default function SectionOne() {
         <CarouselNext />
         <div className="w-full h-full bg-red-500 z-10" />
       </Carousel>
+      <CtaButtons
+        label="Get My Estimate"
+        href="/book"
+        secondaryLabel="See More Designs"
+        secondaryHref="/projects"
+      />
     </div>
   );
 }

@@ -1,5 +1,6 @@
 "use client";
 
+import CtaButtons from "@/components/CtaButtons";
 import { Button } from "@/components/ui/button";
 import { motion } from "motion/react";
 
@@ -28,15 +29,12 @@ export default function Hero() {
                 Luxury awaits you at every corner
               </p>
             </div>
-            <motion.div
-              animate={{ opacity: 1 }}
-              initial={{ opacity: 0 }}
-              transition={{ delay: 1, duration: 1 }}
-              className="flex gap-4"
-            >
-              <Button>Get My Estimate</Button>
-              <Button variant="outline">Read Our Blog</Button>
-            </motion.div>
+            <CtaButtons
+              label="Get My Estimate"
+              href="/book"
+              secondaryLabel="Read Our Blog"
+              secondaryHref="/blog"
+            />
           </motion.div>
           <div className="flex-1"></div>
         </div>
