@@ -1,11 +1,13 @@
 "use client";
 
+import { cn } from "@/lib/utils";
+import { motion } from "motion/react";
+
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
 import { Textarea } from "@/components/ui/textarea";
-import { cn } from "@/lib/utils";
 
 export default function ContactForm({ className }: { className?: string }) {
   const submitForm = (e: React.FormEvent<HTMLFormElement>) => {
@@ -13,7 +15,10 @@ export default function ContactForm({ className }: { className?: string }) {
     // const formData = new FormData();
   };
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.3 }}
       className={cn("flex flex-col items-center justify-center p-8", className)}
     >
       <p className="text-neutral-400">Your new home awaits,</p>
@@ -56,7 +61,7 @@ export default function ContactForm({ className }: { className?: string }) {
             htmlFor="message"
             className="absolute block -top-2 ml-3 z-10 bg-black px-1 py-0 text-neutral-500 text-xs"
           >
-            What you&apost;re looking for
+            What you&apos;re looking for
           </Label>
           <Textarea rows={5} name="message" id="message" />
         </div>
@@ -64,6 +69,6 @@ export default function ContactForm({ className }: { className?: string }) {
           Get A Quote
         </Button>
       </form>
-    </div>
+    </motion.div>
   );
 }

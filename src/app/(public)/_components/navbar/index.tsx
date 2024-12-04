@@ -1,12 +1,16 @@
 "use client";
 
-import Logo from "@/components/Logo";
-import NavItem from "./NavItem";
 import { items } from "../../_data/navItems";
+import NavItem from "./NavItem";
+import Logo from "@/components/Logo";
+
 import { useState } from "react";
+import Link from "next/link";
+
+import { motion } from "motion/react";
+import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import useScrollNavigation from "@/hooks/useScrollNavigation";
-import { cn } from "@/lib/utils";
 
 export default function Navbar() {
   const [isHovered, setIsHovered] = useState(-1);
@@ -41,7 +45,16 @@ export default function Navbar() {
             </Button>
           ))}
         </ul>
-        <Button variant="default">Get a Quote</Button>
+        <motion.div
+          initial={{ opacity: 0, x: 10 }}
+          animate={{ opacity: 1, x: 0, transition: { delay: 0.6 } }}
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
+        >
+          <Link href="/book">
+            <Button variant="default">Get a Quote</Button>
+          </Link>
+        </motion.div>
       </div>
     </nav>
   );
