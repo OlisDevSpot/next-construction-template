@@ -10,11 +10,12 @@ import { cn } from "@/lib/utils";
 export default function ContactForm({ className }: { className?: string }) {
   const submitForm = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const formData = new FormData();
-    console.log(e.target);
+    // const formData = new FormData();
   };
   return (
-    <div className={cn("flex flex-col items-center justify-center", className)}>
+    <div
+      className={cn("flex flex-col items-center justify-center p-8", className)}
+    >
       <p className="text-neutral-400">Your new home awaits,</p>
       <h2 className="font-bold text-3xl">Get In Touch</h2>
       <Separator className="min-w-6 max-w-20 bg-input-muted mt-4 mb-8" />
@@ -32,7 +33,7 @@ export default function ContactForm({ className }: { className?: string }) {
           </Label>
           <Input type="text" name="name" id="name" />
         </div>
-        <div className="relative">
+        <div className="relative col-span-2 md:col-span-1">
           <Label
             htmlFor="phone"
             className="absolute block -top-2 ml-3 z-10 bg-black px-1 py-0 text-neutral-500 text-xs"
@@ -41,7 +42,7 @@ export default function ContactForm({ className }: { className?: string }) {
           </Label>
           <Input type="text" name="phone" id="phone" />
         </div>
-        <div className="relative">
+        <div className="relative col-span-2 md:col-span-1">
           <Label
             htmlFor="email"
             className="absolute block -top-2 ml-3 z-10 bg-black px-1 py-0 text-neutral-500 text-xs"
