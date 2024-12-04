@@ -56,7 +56,7 @@ export default function ContactForm({ className }: { className?: string }) {
             htmlFor="message"
             className="absolute block -top-2 ml-3 z-10 bg-black px-1 py-0 text-neutral-500 text-xs"
           >
-            What you're looking for
+            What you&apost;re looking for
           </Label>
           <Textarea rows={5} name="message" id="message" />
         </div>
