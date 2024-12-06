@@ -37,7 +37,7 @@ export default function ServicesPage() {
           </div>
         </div>
       </HeroContainer>
-      <div className="h-screen pt-16 p-24" id="services">
+      <div className="h-screen p-24" id="services">
         <RulerPencil />
       </div>
     </>
