@@ -3,7 +3,7 @@ import Navbar from "./_components/navbar";
 
 export default function layout({ children }: { children: React.ReactNode }) {
   return (
-    <>
+    <div className="flex flex-col">
       <div className="w-full h-auto">
         <Navbar />
         <main className="w-full min-w-screen h-auto min-h-screen">
@@ -11,6 +11,6 @@ export default function layout({ children }: { children: React.ReactNode }) {
         </main>
       </div>
       <Footer />
-    </>
+    </div>
   );
 }

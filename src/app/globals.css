@@ -93,6 +93,22 @@ body {
     font-family: var(--font-syne);
   }
 
+  h1 {
+    @apply text-6xl font-semibold;
+  }
+
+  h2 {
+    @apply text-3xl;
+  }
+
+  h3 {
+    @apply text-2xl;
+  }
+
+  h4 {
+    @apply text-xl;
+  }
+
   ::-webkit-scrollbar {
     @apply w-[6px];
   }

@@ -16,12 +16,14 @@ export default function NavItem({ label, href, isHovered }: NavItemProps) {
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, delay: 0.2 }}
-      className="flex items-center gap-1 text-neutral-100"
+      className="text-neutral-100"
     >
-      <Link href={href}>{label}</Link>
-      <ChevronDown
-        className={cn("transition", isHovered ? "rotate-180" : "")}
-      />
+      <Link href={href} className="flex items-center gap-1">
+        <p>{label}</p>
+        <ChevronDown
+          className={cn("transition", isHovered ? "rotate-180" : "")}
+        />
+      </Link>
     </motion.li>
   );
 }
