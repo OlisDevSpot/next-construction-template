@@ -5,12 +5,12 @@ import NavItem from "./NavItem";
 import Logo from "@/components/Logo";
 
 import { useState } from "react";
-import Link from "next/link";
 
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import useScrollNavigation from "@/hooks/useScrollNavigation";
+import TransitionLink from "@/components/TransitionLink";
 
 export default function Navbar() {
   const [isHovered, setIsHovered] = useState(-1);
@@ -51,9 +51,9 @@ export default function Navbar() {
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
         >
-          <Link href="/book">
+          <TransitionLink href="/book">
             <Button variant="default">Get a Quote</Button>
-          </Link>
+          </TransitionLink>
         </motion.div>
       </div>
     </nav>
