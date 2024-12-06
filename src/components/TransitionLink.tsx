@@ -4,11 +4,13 @@ import { useRouter } from "next/navigation";
 interface TransitionLinkProps extends LinkProps {
   children: React.ReactNode;
   href: string;
+  className?: string;
 }
 
 export default function TransitionLink({
   children,
   href,
+  className,
   ...props
 }: TransitionLinkProps) {
   const router = useRouter();
@@ -27,7 +29,12 @@ export default function TransitionLink({
   };
 
   return (
-    <Link onClick={handleTransition} href={href} {...props}>
+    <Link
+      onClick={handleTransition}
+      href={href}
+      className={className}
+      {...props}
+    >
       {children}
     </Link>
   );
