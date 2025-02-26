@@ -1,4 +1,4 @@
-export const items = [
+export const MENU_ITEMS = [
   {
     label: "About",
     href: "/about",

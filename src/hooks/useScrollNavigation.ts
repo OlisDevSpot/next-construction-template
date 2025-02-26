@@ -6,12 +6,13 @@ const useScrollNavigation = (startYPosition: number = 10) => {
   useEffect(() => {
     const handleScroll = () => {
       const currentScroll = window.scrollY;
+      const scrollOut =
+        currentScroll > startYPosition && scrollPosition <= startYPosition;
+      const scrollIn =
+        currentScroll <= startYPosition && scrollPosition > startYPosition;
 
       // Update state only if scroll position crosses the 10-pixel threshold
-      if (
-        (currentScroll > startYPosition && scrollPosition <= startYPosition) ||
-        (currentScroll <= startYPosition && scrollPosition > startYPosition)
-      ) {
+      if (scrollOut || scrollIn) {
         setScrollPosition(currentScroll);
       }
     };

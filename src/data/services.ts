@@ -1,11 +1,20 @@
+import RulerPencil from "@/components/icons/RulerPencil";
+import Brush from "@/components/icons/Brush";
+
 export const services = [
   {
-    id: 1,
-    title: "Full home remodel",
-    icon: "/icons/ruler-pencil.svg",
+    label: "Full home remodel",
+    description: "",
+    icon: RulerPencil,
   },
   {
-    id: 2,
-    title: "Design and build",
+    label: "Interior Design",
+    description: "Transform your space with our interior design services.",
+    icon: RulerPencil,
+  },
+  {
+    label: "Interior & Exterior Paint",
+    description: "Enhance your home's appearance with our paint services.",
+    icon: Brush,
   },
 ];

@@ -4,7 +4,10 @@ import { ChevronDown } from "lucide-react";
 import ServiceImage from "./_components/ServiceImage";
 import HeroContainer from "../../_components/HeroContainer";
 import { useRouter } from "next/navigation";
-import RulerPencil from "@/components/icons/RulerPencil";
+import { services } from "@/data/services";
+import { motion } from "motion/react";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 export default function ServicesPage() {
   const router = useRouter();
@@ -37,8 +40,34 @@ export default function ServicesPage() {
           </div>
         </div>
       </HeroContainer>
-      <div className="h-screen p-24" id="services">
-        <RulerPencil />
+      <div className="min-h-screen p-24" id="services">
+        <div className="flex flex-wrap gap-4">
+          {services.map((service, i) => (
+            <motion.div
+              key={service.label}
+              className={cn(
+                "flex gap-4 rounded-lg p-4 border border-neutral-600 relative min-h-[250px] overflow-hidden",
+                i % 3 === 0 ? "w-1/4" : "flex-grow w-2/5"
+              )}
+              whileHover={{
+                scale: 1.02,
+                transition: { duration: 0.2 },
+              }}
+            >
+              <service.icon
+                size={56}
+                className="absolute top-0 left-0 place-content-center fill-orange-500/20 h-[75%] w-1/2"
+              />
+              <div className="flex flex-col gap-2 items-center w-full">
+                <h3 className="">{service.label}</h3>
+                <p className="text-muted-foreground flex-grow">
+                  {service.description}
+                </p>
+                <Button className="w-full z-10">Learn More</Button>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </>
   );

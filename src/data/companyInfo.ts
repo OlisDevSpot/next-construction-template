@@ -2,9 +2,9 @@ import { Mail, Phone } from "lucide-react";
 import { FaFacebookSquare, FaInstagramSquare, FaYoutube } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 
-export const companyInfo = {
+export const COMPANY_INFO = {
   name: "ModCon Builders",
-  address: "12357 Main Street Suite #101, Los Angeles, CA 91002",
+  address: "6252 Calvin Ave, Tarzana, CA 91335",
   caLicense: "#1078444",
   owner: "Oliver Porat",
   icon: Mail,
