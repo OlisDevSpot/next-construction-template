@@ -3,7 +3,7 @@
 import CtaButtons from "@/components/CtaButtons";
 import { motion } from "motion/react";
 
-export default function Hero() {
+export function Hero() {
   return (
     <motion.div
       animate={{ opacity: 1 }}

@@ -16,7 +16,7 @@ export function MainSection({
   return (
     <div
       className={cn(
-        "h-[calc(100vh-64px)] flex flex-col md:flex-row items-center justify-center gap-8 px-2 py-16 md:px-8 max-w-[1280px] mx-auto",
+        "h-[calc(100vh-64px)] flex flex-col md:flex-row items-center justify-center gap-8 px-4 py-16 md:px-8 max-w-[1280px] mx-auto",
         className
       )}
       {...props}
