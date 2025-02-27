@@ -15,8 +15,4 @@ export const MENU_ITEMS = [
     label: "Blog",
     href: "/blog",
   },
-  {
-    label: "Book Online",
-    href: "/book",
-  },
 ];

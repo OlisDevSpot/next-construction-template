@@ -20,7 +20,7 @@ export default function CtaButtons({
       animate={{ opacity: 1 }}
       initial={{ opacity: 0 }}
       transition={{ delay: 1, duration: 1 }}
-      className="flex flex-col md:flex-row gap-4 items-center justify-center md:justify-start mt-6"
+      className="flex flex-col md:flex-row gap-4 items-center justify-center md:justify-start"
     >
       {secondaryHref && secondaryLabel && (
         <TransitionLink href={secondaryHref}>

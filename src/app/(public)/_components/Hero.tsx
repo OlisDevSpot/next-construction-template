@@ -21,10 +21,10 @@ export default function Hero() {
             className="flex-1 flex flex-col gap-10"
           >
             <div className="flex flex-col text-center md:text-left">
-              <h1 className="text-5xl md:text-6xl font-bold text-neutral-100">
-                Experience Modern Construction.
+              <h1 className="text-5xl md:text-7xl font-bold text-neutral-100 leading-[1.3]">
+                Experience Modern Construction
               </h1>
-              <p className="text-neutral-300 text-lg">
+              <p className="text-neutral-300 text-lg leading-relaxed">
                 Luxury awaits you at every corner
               </p>
             </div>
@@ -35,7 +35,7 @@ export default function Hero() {
               secondaryHref="/blog"
             />
           </motion.div>
-          <div className="flex-1"></div>
+          <div className="flex-1 hidden md:block"></div>
         </div>
       </div>
     </motion.div>

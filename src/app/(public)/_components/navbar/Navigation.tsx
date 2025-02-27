@@ -1,12 +1,14 @@
+import { cn } from "@/lib/utils";
 import { MENU_ITEMS } from "../../_data/navItems";
 import NavItem from "./NavItem";
 import { motion } from "motion/react";
 
 interface NavigationProps {
   onClick: () => void;
+  className?: string;
 }
 
-export default function Navigation({ onClick }: NavigationProps) {
+export default function Navigation({ onClick, className }: NavigationProps) {
   return (
     <motion.ul
       initial="initial"
@@ -14,10 +16,13 @@ export default function Navigation({ onClick }: NavigationProps) {
       transition={{
         staggerChildren: 0.1,
       }}
-      className="flex flex-col md:flex-row items-center w-auto gap-4"
+      className={cn(
+        "flex flex-col md:flex-row items-center w-auto gap-4",
+        className
+      )}
     >
       {MENU_ITEMS.map((item) => (
-        <div className="overflow-hidden w-fit" key={item.label}>
+        <div className="overflow-hidden w-full" key={item.label}>
           <motion.button
             variants={{
               initial: {

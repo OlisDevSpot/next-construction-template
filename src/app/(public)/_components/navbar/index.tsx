@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import Logo from "@/components/Logo";
 import { cn } from "@/lib/utils";
-import { motion } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
 import { Button } from "@/components/ui/button";
 
 import useScrollNavigation from "@/hooks/useScrollNavigation";
@@ -46,7 +46,9 @@ export default function Navbar() {
             onClick={() => setIsOpen(!isOpen)}
             className="cursor-pointer"
           />
-          {isOpen && <SideNav onClick={() => setIsOpen(!isOpen)} />}
+          <AnimatePresence mode="popLayout">
+            {isOpen && <SideNav onClick={() => setIsOpen(!isOpen)} />}
+          </AnimatePresence>
         </div>
       </div>
     </nav>

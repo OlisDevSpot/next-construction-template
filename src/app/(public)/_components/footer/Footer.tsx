@@ -46,7 +46,7 @@ const footerServicesLinks = [
 ];
 
 export default function Footer() {
-  const { caLicense, hours, contact, socials } = COMPANY_INFO;
+  const { name, caLicense, hours, contact, socials } = COMPANY_INFO;
   return (
     <footer className="bg-neutral-800">
       <div className="flex flex-col gap-8 p-8 max-w-[1280px] mx-auto">
@@ -56,7 +56,7 @@ export default function Footer() {
             <p className="text-neutral-300 font-bold tracking-tighter">
               Your home is our canvas
             </p>
-            <p>CA Lic. {caLicense}</p>
+            <p>CA Lic. #{caLicense}</p>
             <div className="flex gap-2 items-center mt-4">
               {socials.map((social) => (
                 <motion.a
@@ -120,8 +120,8 @@ export default function Footer() {
         </div>
         <div className="flex flex-col items-center justify-center text-sm text-neutral-400 text-center">
           <p className="font-bold">
-            All Installations completed by a Licensed Contractor - MODCON
-            DEVELOPERS, LLC | California #1027027
+            All Installations completed by a Licensed Contractor - {name}, LLC |
+            CA Lic. #{caLicense}
           </p>
           <p>
             Actual savings will vary depending on system production, geography,
@@ -131,9 +131,7 @@ export default function Footer() {
             us to receive a detailed proposal based on your home and energy
             usage.
           </p>
-          <p className="mt-4">
-            © ModCon Builders Inc 2024. All rights reserved.
-          </p>
+          <p className="mt-4">© {name} Inc 2024. All rights reserved.</p>
         </div>
       </div>
     </footer>
